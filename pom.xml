@@ -32,17 +32,11 @@ src/main/java/com/test/Project.java
                     </dependencies>
 
 	         <build>
-		        <outputDirectory>target2</outputDirectory>
+		        <outputDirectory>target</outputDirectory>
 			<finalName>${maven.build.timestamp}</finalName>
          		<sourceDirectory>src/main/java/com/test</sourceDirectory>
-<!--			<configuration>
-      				<format>{0,date,yyyyMMddHHmmss}</format>
-      				<items>
-        				<item>timestamp</item>
-      				</items>
-			</configuration>  -->
-            		<resources>
-                		<resource>
+                	<resources>
+				<resource>
                     			<directory>${basedir}/src/main</directory>
                     			<includes>
                     				<include>**/*.properties</include>
