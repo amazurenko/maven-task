@@ -11,7 +11,7 @@ src/main/java/com/test/Project.java
 -->
 
   <groupId>srv.jenfins</groupId>
-  <artifactId>project.for.mvn</artifactId>
+  <artifactId>projectformvn</artifactId>
   <version>0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>maven-simple</name>
@@ -23,18 +23,19 @@ src/main/java/com/test/Project.java
                             <version>4.11</version>
                             <scope>test</scope>
                         </dependency>
-                        <dependency>
-                            <groupId>org.apache.commons</groupId>
-                            <artifactId>commons-collections4</artifactId>
-                            <version>4.0</version>
-                            <scope>compile</scope>
-                        </dependency>
-<!--                        <dependency>
+                       
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-collections4</artifactId>
+				<version>4.0</version>
+			</dependency>
+<!--			
+			<dependency>
                             <groupId>org.javassist</groupId>
                             <artifactId>javassist</artifactId>
                             <version>3.13.0-GA</version>
                             <scope>compile</scope>
-                        </dependency> -->
+                        </dependency>  -->
                     </dependencies>
 
 	         <build>
@@ -48,6 +49,12 @@ src/main/java/com/test/Project.java
                     				<include>**/*.properties</include>
                     			</includes>
                 		</resource>
+                                <resource>
+                                        <directory>${basedir}/src/test/java/com/test</directory>
+                                        <includes>
+                                                <include>**/*.java</include>
+                                        </includes>
+                                </resource>
             		</resources>
                  <plugins>
                      <plugin>
