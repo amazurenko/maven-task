@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                    http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+<!--
+src/test/java/com/test/UnitTest.java
+src/main/resources/project.properties
+src/main/java/com/test/Project.java
+-->
+
+  <groupId>srv.jenfins</groupId>
+  <artifactId>project.for.mvn</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>maven-simple</name>
+
+                <dependencies>
+                        <dependency>
+                            <groupId>junit</groupId>
+                            <artifactId>junit</artifactId>
+                            <version>4.11</version>
+                            <scope>test</scope>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.apache.commons</groupId>
+                            <artifactId>commons-collections4</artifactId>
+                            <version>4.0</version>
+                            <scope>compile</scope>
+                        </dependency>
+<!--                        <dependency>
+                            <groupId>org.javassist</groupId>
+                            <artifactId>javassist</artifactId>
+                            <version>3.13.0-GA</version>
+                            <scope>compile</scope>
+                        </dependency> -->
+                    </dependencies>
+
+	         <build>
+		        <outputDirectory>target2</outputDirectory>
+          		<finalName>ROOT</finalName>
+         		<sourceDirectory>src/main/java/com/test</sourceDirectory>
+            		<resources>
+                		<resource>
+                    			<directory>${basedir}/src/main</directory>
+                    			<includes>
+                    				<include>**/*.properties</include>
+                    			</includes>
+                		</resource>
+            		</resources>
+                 <plugins>
+                     <plugin>
+                         <groupId>org.apache.maven.plugins</groupId>
+                         <artifactId>maven-pmd-plugin</artifactId>
+                         <version>3.2.1</version>
+                     </plugin>
+                 </plugins>
+             </build>
+</project>
